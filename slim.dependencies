@@ -1,8 +1,8 @@
 [
-  {
-	"repository": "SlimRoms/android_device_htc_endeavoru",
-	"target_path": "device/htc/endeavoru"
-	"branch": "jb"
-  }
+ {
+	"repository": "TheMuppets/proprietary_vendor_htc",
+	"target_path": "vendor/htc",
+	"branch": "jellybean"
+ }
 ]
 
