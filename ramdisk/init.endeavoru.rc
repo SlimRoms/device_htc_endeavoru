@@ -9,12 +9,6 @@ on early-init
     mkdir /mnt/sdcard 0775 system system
     symlink /mnt/sdcard /sdcard
 
-on early-boot
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive
-    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor interactive
-    write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor interactive
-    write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor interactive
-
 on emmc-fs
     mount ext4 /dev/block/mmcblk0p12 /system wait rw
     mount ext4 /dev/block/mmcblk0p15 /data wait rw noatime nosuid nodev noauto_da_alloc
@@ -74,6 +68,7 @@ on boot
 # Power management settings
     write /sys/module/cpu_tegra3/parameters/no_lp 0
     write /sys/devices/system/cpu/cpufreq/interactive/boost_factor 2
+    write /sys/devices/system/cpu/cpufreq/interactive/boost 1
     write /sys/devices/system/cpu/cpufreq/interactive/input_boost 1
     write /sys/devices/system/cpu/cpufreq/interactive/sustain_load 80
     write /sys/devices/system/cpu/cpu1/online 0
@@ -85,6 +80,8 @@ on boot
 # Interactive governor settings
     chown system system /sys/devices/system/cpu/cpufreq/interactive/boost_factor
     chmod 0664 /sys/devices/system/cpu/cpufreq/interactive/boost_factor
+    chown system system /sys/devices/system/cpu/cpufreq/interactive/boost
+    chmod 0664 /sys/devices/system/cpu/cpufreq/interactive/boost
     chown system system /sys/devices/system/cpu/cpufreq/interactive/go_maxspeed_load
     chmod 0664 /sys/devices/system/cpu/cpufreq/interactive/go_maxspeed_load
     chown system system /sys/devices/system/cpu/cpufreq/interactive/io_is_busy
@@ -422,6 +419,12 @@ service post_boot /system/bin/sh /system/etc/post_boot.sh
 	disabled
 	oneshot
 
+service tegra-post-boot /system/bin/sh /system/etc/init.tegra.post_boot.sh
+        class main
+        user root
+        disabled
+        oneshot
+
 service call_vol3 /system/bin/pollyd
        class main
        user root
@@ -430,3 +433,4 @@ on property:init.svc.bootanim=stopped
    write /sys/kernel/debug/tegra_hotplug/max_cpus 4
    write /sys/module/cpu_tegra3/parameters/auto_hotplug 1
     start post_boot
+    start tegra-post-boot
