@@ -23,8 +23,8 @@ PRODUCT_COPY_FILES += \
 	vendor/slim/prebuilt/common/etc/init.d/00check:system/etc/init.d/00check
 
 #copy kernel
-PRODUCT_COPY_FILES += \
-	device/htc/endeavoru/prebuilt/kernel:kernel
+#PRODUCT_COPY_FILES += \
+#	device/htc/endeavoru/prebuilt/kernel:kernel
 
 #Set build fingerprint / ID / Product Name ect.
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=endeavoru BUILD_FINGERPRINT="htc_europe/endeavoru/endeavoru:4.0.4/IMM76D/89015.2:user/release-keys" PRIVATE_BUILD_DESC="2.17.401.2 CL89015 release-keys"
