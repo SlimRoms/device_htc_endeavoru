@@ -101,10 +101,10 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/fsl-tegra-udc/gadget/lu
 # Try kernel building
 TARGET_KERNEL_SOURCE := kernel/htc/endeavoru
 TARGET_KERNEL_CONFIG :=  cyanogenmod_endeavoru_defconfig
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.4.3
+#TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.4.3
 
 # Kernel / Ramdisk
-TARGET_PREBUILT_KERNEL := device/htc/endeavoru/prebuilt/kernel
+#TARGET_PREBUILT_KERNEL := device/htc/endeavoru/prebuilt/kernel
 TARGET_PROVIDES_INIT_TARGET_RC := true
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 8388608
@@ -115,7 +115,6 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 
 #Recovery
 TARGET_PREBUILT_RECOVERY_KERNEL := device/htc/endeavoru/prebuilt/recovery_kernel
-BOARD_CUSTOM_BOOTIMG_MK := device/htc/endeavoru/recovery/custombootimg.mk
 BOARD_USES_MMCUTILS := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_NO_MISC_PARTITION := true
