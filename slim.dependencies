@@ -3,6 +3,11 @@
 	"repository":   "TheMuppets/proprietary_vendor_htc",
 	"target_path":  "vendor/htc",
 	"branch":     "jellybean"
+  },
+  {
+	"repository": "CyanogenMod/android_kernel_htc_endeavoru",
+	"target_path": "kernel/htc/endeavoru",
+	"branch": "jellybean"
   }
 ]
 
