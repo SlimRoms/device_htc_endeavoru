@@ -1,0 +1,12 @@
+[
+  {
+        "repository":   "TheMuppets/proprietary_vendor_htc",
+        "target_path":  "vendor/htc",
+        "branch":     "cm-10.1"
+  },
+  {
+        "repository": "CyanogenMod/android_kernel_htc_endeavoru",
+        "target_path": "kernel/htc/endeavoru",
+        "branch": "mr1-staging"
+  }
+]

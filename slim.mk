@@ -10,17 +10,27 @@ TARGET_BOOTANIMATION_PRELOAD := true
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
-$(call inherit-product, vendor/cm/config/gsm.mk)
-$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
+# Inherit some common Slim stuff.
+$(call inherit-product, vendor/slim/config/common_full_phone.mk)
+$(call inherit-product, vendor/slim/config/gsm.mk)
+$(call inherit-product, vendor/slim/config/nfc_enhanced.mk)
+
+PRODUCT_COPY_FILES +=  \
+    vendor/slim/prebuilt/hdpi/bootanimation.zip:system/media/bootanimation.zip
+
+#copy 00check
+PRODUCT_COPY_FILES += \
+    vendor/slim/prebuilt/common/etc/init.d/00check:system/etc/init.d/00check
+
+# Inherit torch settings
+$(call inherit-product, vendor/slim/config/common_ledflash.mk)
 
 #Set build fingerprint / ID / Product Name etc.
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=endeavoru BUILD_FINGERPRINT="htc_europe/endeavoru/endeavoru:4.1.1/JRO03C/125529.22:user/release-keys" PRIVATE_BUILD_DESC="3.14.401.22 CL125529 release-keys"
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := endeavoru
-PRODUCT_NAME := cm_endeavoru
+PRODUCT_NAME := slim_endeavoru
 PRODUCT_BRAND := htc_europe
 PRODUCT_MODEL := HTC One X
 PRODUCT_MANUFACTURER := HTC
