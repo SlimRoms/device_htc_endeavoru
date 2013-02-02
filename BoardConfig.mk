@@ -64,6 +64,7 @@ BOARD_SOFTAP_DEVICE              := wl12xx_mac80211
 WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/wl12xx_sdio.ko"
 WIFI_DRIVER_MODULE_NAME          := "wl12xx_sdio"
 WIFI_FIRMWARE_LOADER             := ""
+WIFI_BAND                        := 802_11_ABGN
 COMMON_GLOBAL_CFLAGS += -DUSES_TI_MAC80211
 endif
 
@@ -85,6 +86,8 @@ NEED_WORKAROUND_CORTEX_A9_745320 := true
 BOARD_VOLD_MAX_PARTITIONS := 20
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/fsl-tegra-udc/gadget/lun0/file
+BOARD_SDCARD_INTERNAL_DEVICE := /dev/block/mmcblk0p14
+BOARD_HAS_SDCARD_INTERNAL := true
 
 # Partitions Info
 #cat /proc/emmc

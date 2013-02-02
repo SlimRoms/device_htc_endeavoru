@@ -21,11 +21,6 @@
      for different hardware and product builds. -->
 <resources>
 
-    <!-- Boolean indicating if current platform supports quick switch-on/off of
-         Bluetooth Module -->
-<!--    <bool name="config_bluetooth_adapter_quick_switch">true</bool>
--->
-
     <!-- Default color for notification LED is green. -->
     <color name="config_defaultNotificationColor">#ff00ff00</color>
 
@@ -181,9 +176,6 @@
         <item>5</item>
         <item>7</item>
     </integer-array>
-
-    <!-- Boolean indicating whether the wifi chipset has p2p support -->
-    <bool translatable="false" name="config_wifi_p2p_support">false</bool>
 
     <!-- Boolean indicating whether the wifi chipset has dual frequency band support -->
     <bool translatable="false" name="config_wifi_dual_band_support">true</bool>
