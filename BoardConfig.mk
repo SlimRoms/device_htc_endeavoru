@@ -108,7 +108,7 @@ BOARD_HAS_SDCARD_INTERNAL := true
 # Try kernel building
 TARGET_KERNEL_SOURCE := kernel/htc/endeavoru
 TARGET_KERNEL_CONFIG :=  cyanogenmod_endeavoru_defconfig
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.4.3
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.4.3/bin/arm-eabi-
 
 # Kernel / Ramdisk
 #TARGET_PREBUILT_KERNEL := device/htc/endeavoru/prebuilt/kernel
