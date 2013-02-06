@@ -1,8 +1,8 @@
 [
   {
-        "repository":   "TheMuppets/proprietary_vendor_htc",
+        "repository":   "SlimRoms/proprietary_vendor_htc",
         "target_path":  "vendor/htc",
-        "branch":     "cm-10.1"
+        "branch":     "jb4.2"
   },
   {
         "repository": "CyanogenMod/android_kernel_htc_endeavoru",
