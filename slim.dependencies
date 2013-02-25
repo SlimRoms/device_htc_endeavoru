@@ -1,7 +1,12 @@
 [
- {
-   "repository": "CyanogenMod/android_kernel_htc_endeavoru",
-   "target_path": "kernel/htc/endeavoru",
-   "branch": "cm-10.1"
- }
+    {
+        "repository": "n3ocort3x/endeavoru_3.14/",
+        "target_path": "kernel/htc/endeavoru",
+        "branch": "master"
+    },
+    {
+        "repository": "SlimRoms/android_external_wpa_supplicant_8_ti",
+        "target_path": "external/wpa_supplicant_8_ti",
+        "branch": "jb4.2"
+    }
 ]
