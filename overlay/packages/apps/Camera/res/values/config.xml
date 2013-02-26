@@ -17,8 +17,18 @@
 <!-- Camera app resources that may need to be customized
      for different hardware or product builds. -->
 <resources>
+    <!-- Maximum recording length in milliseconds. 0 means unlimited. -->
+    <integer name="max_video_recording_length">0</integer>
+    <!-- The camera HAL does its own preview state management during snaps -->
+    <bool name="previewStopsDuringSnapshot">false</bool>
+    <!-- Samsung Camcorder Mode -->
+    <bool name="needsSamsungCamMode">false</bool>
     <!-- HTC Camcorder Mode -->
     <bool name="needsHTCCamMode">true</bool>
+    <!-- Disable rear camera face detection -->
+    <bool name="config_noFaceDetect">true</bool>
+    <!-- Force use of profile video size -->
+    <bool name="useProfileVideoSize">true</bool>
     <!-- Allows setting video size before recording starts -->
     <bool name="needsEarlyVideoSize">true</bool>
     <!-- The camera removes the focus modes by default when touch-to-focus
@@ -26,4 +36,10 @@
     <bool name="wantsFocusModes">true</bool>
     <!-- Disable S/W HDR for H/W processing -->
     <bool name="disableSoftwareHDR">true</bool>
+    <!-- Ignore preferred preview size and use best value from supported preview sizes -->
+    <bool name="ignorePreferredPreviewSizeForVideo">true</bool>
+    <!-- Disable face detection on the front camera -->
+    <bool name="noFaceDetectOnFrontCamera">true</bool>
+    <!-- Use ZSL mode for Qualcomm cameras -->
+    <bool name="enableZSL">false</bool>
 </resources>

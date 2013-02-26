@@ -22,7 +22,6 @@
 
 # This variable is set first, so it can be overridden
 # by BoardConfigVendor.mk
-USE_CAMERA_STUB := true
 BOARD_USES_GENERIC_AUDIO := true
 
 # inherit from the proprietary version
@@ -127,9 +126,10 @@ COMMON_GLOBAL_CFLAGS += -DHTCLOG
 BOARD_USES_GENERIC_INVENSENSE := false
 
 # Camera
+USE_CAMERA_STUB := false
 BOARD_CAMERA_HAVE_ISO := true
 COMMON_GLOBAL_CFLAGS += -DHAVE_ISO
-COMMON_GLOBAL_CFLAGS += -DMR0_CAMERA_BLOB
+COMMON_GLOBAL_CFLAGS += -DMR0_CAMERA_BLOB -DICS_CAMERA_BLOB
 COMMON_GLOBAL_CFLAGS += -DDISABLE_HW_ID_MATCH_CHECK
 
 # Bluetooth
