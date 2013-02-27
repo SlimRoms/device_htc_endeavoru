@@ -33,6 +33,8 @@ on init
     mkdir /mnt/usb 0775 system system
 
 on fs
+    setprop ro.crypto.umount_sd false
+
     mkdir /rca 0775 radio radio
     mkdir /rfs 0755 radio radio
     mkdir /devlog 0700 root root
@@ -69,6 +71,7 @@ on boot
     # Wi-Fi
     mkdir /data/misc/wifi 0770 wifi wifi
     mkdir /data/misc/wifi/sockets 0770 wifi wifi
+    mkdir /data/misc/wifi/hostapd 0770 wifi wifi
 
     # Bluetooth power up/down interface
     chown bluetooth net_bt_stack /sys/class/rfkill/rfkill0/type
@@ -151,6 +154,7 @@ on boot
 
 # Camera
     chown media media /sys/htc/media_boost_freq
+    chown media media /sys/htc/cpu_temp
 
     # For camera to switch burst mode
     chown media media /proc/emmc_burst
