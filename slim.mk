@@ -21,10 +21,6 @@ $(call inherit-product, device/htc/endeavoru/full_endeavoru.mk)
 # Inherit torch settings
 $(call inherit-product, vendor/slim/config/common_ledflash.mk)
 
-# Copy 00check
-PRODUCT_COPY_FILES += \
-    vendor/slim/prebuilt/common/etc/init.d/00check:system/etc/init.d/00check
-
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := endeavoru
 PRODUCT_NAME := slim_endeavoru
