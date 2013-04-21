@@ -96,7 +96,7 @@ endif
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/htc/endeavoru
-TARGET_KERNEL_CONFIG := ap33_android_defconfig
+TARGET_KERNEL_CONFIG := ap33_android_cpuquiet_defconfig
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := linaro/bin/arm-linux-gnueabihf-
 
 # Building wifi modules
