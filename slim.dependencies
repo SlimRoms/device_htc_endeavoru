@@ -8,5 +8,10 @@
         "repository": "SlimRoms/android_external_wpa_supplicant_8_ti",
         "target_path": "external/wpa_supplicant_8_ti",
         "branch": "jb4.2"
+    },
+    {
+        "repository": "SlimRoms/proprietary_vendor_htc",
+        "target_path": "vendor/htc",
+        "branch": "jb4.2"
     }
 ]
